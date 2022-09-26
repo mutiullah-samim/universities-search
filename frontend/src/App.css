@@ -1,0 +1,186 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+.main-section {
+  padding-top: 80px;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  background-color: darkred;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 10;
+}
+
+.header>.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.universities-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.universities-container>.universities-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 80px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  z-index: 10;
+  padding: 10px 20px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  -moz-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.universities-container>.universities-header .search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.universities-container>.universities-header input[name="search"] {
+  flex: 1;
+  padding: 10px;
+  outline: 0;
+  border: 2px solid darkred;
+  font-size: 15px;
+  height: 100%;
+}
+
+.universities-container>.universities-header .search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  height: 100%;
+  background: darkred;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.universities-container>.universities-header .search-btn:hover {
+  background: black;
+}
+
+.universities-container>.universities-header .order {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  column-gap: 5px;
+}
+
+.universities-container>.universities-header .order label {
+  margin-right: 10px;
+}
+
+.universities {
+  margin-top: 70px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
+
+}
+
+.universities .item {
+  flex-basis: calc(33.333333% - 10px);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.27);
+}
+
+
+.universities .item .info {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  row-gap: 10px;
+}
+
+.universities .item .info>.name {
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: start;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+}
+
+
+.loading-indicator {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  margin: 20px auto;
+
+}
+
+.loading-indicator:after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 6px solid darkred;
+  border-color: darkred transparent darkred transparent;
+  animation: loading-indicator 1.2s linear infinite;
+}
+
+@keyframes loading-indicator {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media screen and (max-width:600px) {
+  .universities .item {
+    flex-basis: 100%;
+  }
+}
