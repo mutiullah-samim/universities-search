@@ -10,5 +10,6 @@ application will run at http://localhost:3003
 
 ## To run the tests
 
-#### 1: CD to backend directory 
-#### 2: RUN: npm run test
+#### 1: CD to backend directory
+#### 2: RUN: npm install
+#### 3: RUN: npm run test
